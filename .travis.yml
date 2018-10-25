@@ -1,0 +1,6 @@
+language: ruby
+rvm:
+  - 2.5.3.p105
+
+script:
+  - rails test
