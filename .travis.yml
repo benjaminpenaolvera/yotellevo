@@ -3,4 +3,4 @@ rvm:
   - 2.5.3
 
 script:
-  - rails test
+  - rake test
