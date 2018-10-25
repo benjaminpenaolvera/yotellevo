@@ -19,3 +19,6 @@ AllCops:
       - app/uploaders/**/*
       - Gemfile
       - Rakefile
+      - config/**/*
+      - bin/**
+      - test/test_helper.rb
