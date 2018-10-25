@@ -15,3 +15,9 @@ script:
 
 rvm:
   - 2.5.3
+
+matrix:
+fast_finish: true
+include:
+- rvm: 2.5
+  env: SUITE="rubocop"
