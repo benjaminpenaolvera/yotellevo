@@ -11,8 +11,7 @@ before_install:
 install: bundle install
 
 script:
-  rails test
-  rubocop
+  - bundle exec rake test
 
 rvm:
   - 2.5.3
