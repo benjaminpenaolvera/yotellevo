@@ -12,6 +12,7 @@ install: bundle install
 
 script:
   - bundle exec rubocop
+  - bundle exec rake
   - bundle exec rake test
 
 rvm:
