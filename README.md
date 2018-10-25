@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# yotellevo
+No description for now
+>>>>>>> ce408824ee4b4893bc51ab09000a01cafc63bc16
