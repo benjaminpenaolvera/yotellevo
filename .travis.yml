@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.5.3.p105
+  - 2.5.1
 
 script:
   - rails test
