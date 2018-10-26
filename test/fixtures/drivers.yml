@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  email: MyString
-  phone_number: MyString
-  address: MyString
-  observations: MyText
-  status: false
+driver_fail:
+  name:
+  email:
+  phone_number:
+  address:
+  observations:
+  status:
 
-two:
-  name: MyString
-  email: MyString
-  phone_number: MyString
-  address: MyString
-  observations: MyText
-  status: false
+driver_ok:
+  name: benjamin peña
+  email: test@test.com
+  phone_number: 3125948261
+  address: 'Some text for address example'
+  observations: 'Some text for observations example'
+  status: true
