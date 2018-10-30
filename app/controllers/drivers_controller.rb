@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DriversController < ApplicationController
   before_action :set_driver, only: [:show]
 
