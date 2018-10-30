@@ -14,8 +14,19 @@ class DriversControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'visit the show controller path' do
-    get driver_path(@driver_ok.id)
+    get driver_path(@driver_ok)
 
     assert_response :success
+  end
+
+  # test 'visit the new controller path' do
+  #   driver = Driver.new
+  # end
+
+  test 'destro controller path' do
+    assert_difference 'Driver.count', -1 do
+      delete driver_path(@driver_ok)
+      assert_redirected_to drivers_path
+    end
   end
 end

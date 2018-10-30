@@ -1,0 +1,17 @@
+%h1
+  Agregar un conductor nuevo
+
+= form_for @driver do |d|
+  = d.label :nombre
+  = d.text_field :name
+  = d.label :email
+  = d.text_field :email
+  = d.label :phone_number
+  = d.text_field :phone_number
+  = d.label :dirección
+  = d.text_field :address
+  = d.label :observaciones
+  = d.text_area :observations
+  = d.label :status
+  = d.check_box :status
+  = d.submit

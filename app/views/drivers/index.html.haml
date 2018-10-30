@@ -1,7 +1,7 @@
 .row
   .col-md-12
     %h1
-      Aquí van todos los choferes
+      Lista de choferes
 
 .row
   .col-md-12
@@ -11,7 +11,7 @@
           %th
             name
           %th
-            email
+            telefono
           %th
             Ver
           %th
@@ -24,7 +24,10 @@
           %td
             = d.name
           %td
-            = d.email
+            = d.phone_number
           %td
+            = link_to('Ver', driver_path(d))
           %td
+            = link_to('Editar', '#')
           %td
+            = link_to('Eliminar', driver_path(d), method: :delete)
