@@ -1,0 +1,30 @@
+.row
+  .col-md-12
+    %h1
+      Aquí van todos los choferes
+
+.row
+  .col-md-12
+    %table.table.table-sm.table-striped
+      %thead
+        %tr
+          %th
+            name
+          %th
+            email
+          %th
+            Ver
+          %th
+            Editar
+          %th
+            Eliminar
+      %tbody
+      - @drivers.each do |d|
+        %tr
+          %td
+            = d.name
+          %td
+            = d.email
+          %td
+          %td
+          %td

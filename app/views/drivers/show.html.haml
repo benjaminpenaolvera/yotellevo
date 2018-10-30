@@ -1,0 +1,15 @@
+.row
+  .col-md-4.offset-md-4
+    .card{style:'width 18rem;'}
+      %img.card-img-top{src: 'https://st2.depositphotos.com/1104517/11967/v/950/depositphotos_119675554-stock-illustration-male-avatar-profile-picture-vector.jpg', alt:'@driver.name'}
+      .card-body
+        %h5.card-title
+          = @driver.name
+        %p.card-text
+          = @driver.email
+        %p.card-text
+          = @driver.phone_number
+        %p.card-text
+          = @driver.observations
+        %p.card-text
+          = @driver.status
