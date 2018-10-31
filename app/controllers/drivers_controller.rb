@@ -25,7 +25,7 @@ class DriversController < ApplicationController
   end
 
   def destroy
-    flash[:danger] = "El conductor #{@driver.name} ha sido eliminado" if @driver.destroy
+    flash[:danger] = "El conductor #{@driver.name} ha sido eliminado con exito" if @driver.destroy
     redirect_to drivers_path
   end
 
