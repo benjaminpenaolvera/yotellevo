@@ -16,13 +16,16 @@ class DriversController < ApplicationController
   def create
     @driver = Driver.new(driver_params)
 
-    @driver.save
-    redirect_to @driver
+    if @driver.save
+      flash[:success] = 'Conductor creado con exito!'
+      redirect_to @driver
+    else
+      render 'new'
+    end
   end
 
   def destroy
-    @driver.destroy
-
+    flash[:danger] = "El conductor #{@driver.name} ha sido eliminado" if @driver.destroy
     redirect_to drivers_path
   end
 

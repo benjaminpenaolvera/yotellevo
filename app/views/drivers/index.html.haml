@@ -30,4 +30,4 @@
           %td
             = link_to('Editar', '#')
           %td
-            = link_to('Eliminar', driver_path(d), method: :delete)
+            = link_to('Eliminar', driver_path(d), method: :delete, data: {confirm: "Etás seguro de eliminar a #{d.name}?"})
