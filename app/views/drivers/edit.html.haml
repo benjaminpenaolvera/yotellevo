@@ -1,0 +1,27 @@
+%h1
+  = "Estás editando al siguiente chofer: #{@Driver}"
+
+.row
+  .col-md-6.offset-md-3
+    = form_for @driver do |d|
+      %form
+        .form-group
+          = d.label :nombre, class: 'form-check-label'
+          = d.text_field :name, class: 'form-control'
+        .form-group
+          = d.label :email, class: 'form-check-label'
+          = d.text_field :email, class: 'form-control'
+        .form-group
+          = d.label :phone_number, class: 'form-check-label'
+          = d.text_field :phone_number, class: 'form-control'
+        .form-group
+          = d.label :dirección, class: 'form-check-label'
+          = d.text_field :address, class: 'form-control'
+        .form-group
+          = d.label :observaciones, class: 'form-check-label'
+          = d.text_area :observations, class: 'form-control', rows: '5'
+        .form-check
+          = d.check_box :status, class: 'form-check-input'
+          = d.label :status, class: 'form-check-label'
+
+        = d.submit 'Aceptar', class: 'btn btn-primary'
