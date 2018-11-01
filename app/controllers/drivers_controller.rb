@@ -18,7 +18,7 @@ class DriversController < ApplicationController
 
     if @driver.save
       flash[:success] = 'Conductor creado con exito!'
-      redirect_to drivers_path
+      redirect_to @driver
     else
       render 'new'
     end
