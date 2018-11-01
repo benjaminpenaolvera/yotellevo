@@ -26,7 +26,7 @@ class DriversControllerTest < ActionDispatch::IntegrationTest
           name: "James",
           email: 'nomelose@gmail.com',
           phone_number: '21313123',
-          address:'Algodon de azucar'
+          address: 'Algodon de azucar'
         }
       }
     }
