@@ -23,7 +23,7 @@ class DriversControllerTest < ActionDispatch::IntegrationTest
     params = {
       params: {
         driver: {
-          name: "James",
+          name: 'James',
           email: 'nomelose@gmail.com',
           phone_number: '21313123',
           address: 'Algodon de azucar'
@@ -35,6 +35,23 @@ class DriversControllerTest < ActionDispatch::IntegrationTest
       post drivers_url, params
       assert_redirected_to driver_path(Driver.last)
     end
+  end
+
+  test 'put update controller driver' do
+    params = {
+      params: {
+        driver: {
+          name: 'Podolsky'
+        }
+      }
+    }
+
+    put driver_path(@driver_ok), params
+
+    @driver_ok.reload
+
+    assert_redirected_to @driver_ok
+    assert_equal params[:params][:driver][:name], @driver_ok.name
   end
 
   test 'destroy controller' do
