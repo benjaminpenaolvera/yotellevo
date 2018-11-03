@@ -1,5 +1,6 @@
-%h1
-  = "Estás editando al siguiente chofer: #{@Driver}"
+.row
+  %h1
+    = "Estás editando al chofer: #{@driver.name}"
 
 .row
   .col-md-6.offset-md-3
@@ -20,8 +21,5 @@
         .form-group
           = d.label :observaciones, class: 'form-check-label'
           = d.text_area :observations, class: 'form-control', rows: '5'
-        .form-check
-          = d.check_box :status, class: 'form-check-input'
-          = d.label :status, class: 'form-check-label'
 
-        = d.submit 'Aceptar', class: 'btn btn-primary'
+        = d.submit 'Aceptar', class: 'btn btn-primary btn-block'
