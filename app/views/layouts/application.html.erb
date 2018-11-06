@@ -7,12 +7,26 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 
   <body>
     <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
+    <% end %>
+
+    <% if @user.errors.any? %>
+      <div>
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this logo from being saved:</h2>
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li class="alert alert-warning"><%= msg %></li>
+           <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
     <%= yield %>
   </body>
 </html>
