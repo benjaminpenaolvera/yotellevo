@@ -1,1 +1,7 @@
-%h1 Edit user
+.row
+  %h1
+    = "Estás editando al Usuario: #{@user.name}"
+
+.row
+  .col-md-6.offset-md-3
+    = render "form"

@@ -1,11 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  business_name: MyString
-  address: MyString
+user_fail:
+  name:
+  business_name:
 
-two:
-  name: MyString
-  business_name: MyString
-  address: MyString
+user_ok:
+  name: Company owner
+  business_name: Company owner company
+  email: compnay_mail@yotellevo.com

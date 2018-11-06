@@ -1,0 +1,10 @@
+= form_for @user do |u|
+  %form
+    .form-group
+      = u.label :nombre, class: 'form-check-label'
+      = u.text_field :name, class: 'form-control'
+    .form-group
+      = u.label :business_name, class: 'form-check-label'
+      = u.text_field :business_name, class: 'form-control'
+
+    = u.submit 'Aceptar', class: 'btn btn-primary btn-block'
