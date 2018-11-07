@@ -17,6 +17,14 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test 'get show controller user' do
+    sign_in @user_ok
+
+    get user_path(@user_ok)
+
+    assert_response :success
+  end
+
   test 'put update controller user' do
     sign_in @user_ok
 
