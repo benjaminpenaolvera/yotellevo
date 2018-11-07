@@ -2,19 +2,11 @@ language: ruby
 
 cache: bundler
 
-<<<<<<< HEAD
 before_install:
   - gem update --system
   - gem --version
   - gem install bundler --no-rdoc --no-ri
   - bundle --version
-=======
-# before_install:
-#   - gem update --system
-#   - gem --version
-#   - gem install bundler --no-rdoc --no-ri
-#   - bundle --version
->>>>>>> feature/chofer-crud
 
 install: bundle install
 

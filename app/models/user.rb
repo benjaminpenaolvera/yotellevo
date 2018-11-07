@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-<<<<<<< HEAD
-=======
   # validates :name, presence: true, allow_blank: false, on: :update, message: 'algo'
   validates_presence_of :name, on: :update, message: 'algo'
   validates :name,
@@ -15,5 +13,4 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
->>>>>>> feature/user-crud
 end
