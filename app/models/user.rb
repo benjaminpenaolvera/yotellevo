@@ -3,7 +3,13 @@
 class User < ApplicationRecord
   # validates :name, presence: true, allow_blank: false, on: :update, message: 'algo'
   validates_presence_of :name, on: :update, message: 'algo'
-  validates :business_name,  presence: {message: "your custom message"}, on: :update
+  validates :name,
+            presence: { message: 'Por favor llena este campo con tu nombre completo' },
+            on: :update
+
+  validates :business_name,
+            presence: { message: 'Por favor llena este campo con el nombre de tu negocio' },
+            on: :update
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

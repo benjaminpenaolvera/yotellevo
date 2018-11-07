@@ -1,3 +1,12 @@
+- if @user.errors.any?
+  %div
+    %h2
+      = pluralize(@user.errors.count, "error")
+      prohibited this logo from being saved:
+    %ul
+      - @user.errors.full_messages.each do |msg|
+        %li.alert.alert-warning= msg
+
 = form_for @user do |u|
   %form
     .form-group
