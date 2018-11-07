@@ -1,5 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+<<<<<<< HEAD
 one:
   name: MyString
   email: MyString
@@ -7,3 +8,13 @@ one:
 two:
   name: MyString
   email: MyString
+=======
+user_fail:
+  name:
+  business_name:
+
+user_ok:
+  name: Company owner
+  business_name: Company owner company
+  email: compnay_mail@yotellevo.com
+>>>>>>> feature/user-crud
