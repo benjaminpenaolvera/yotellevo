@@ -1,0 +1,33 @@
+.row
+  .col-md-12
+    %h1
+      Lista de choferes
+
+.row
+  .col-md-12
+    %table.table.table-sm.table-striped
+      %thead
+        %tr
+          %th
+            Nombre
+          %th
+            Telefono
+          %th
+            Ver
+          %th
+            Editar
+          %th
+            Inhabilitar
+      %tbody
+      - @drivers.each do |d|
+        %tr
+          %td
+            = d.name
+          %td
+            = d.phone_number
+          %td
+            = link_to('Ver', driver_path(d))
+          %td
+            = link_to('Editar', edit_driver_path(d))
+          %td
+            = link_to('Eliminar', driver_path(d), method: :delete, data: {confirm: "Etás seguro de eliminar a #{d.name}?"})

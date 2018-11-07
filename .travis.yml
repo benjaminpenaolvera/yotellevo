@@ -2,11 +2,19 @@ language: ruby
 
 cache: bundler
 
+<<<<<<< HEAD
 before_install:
   - gem update --system
   - gem --version
   - gem install bundler --no-rdoc --no-ri
   - bundle --version
+=======
+# before_install:
+#   - gem update --system
+#   - gem --version
+#   - gem install bundler --no-rdoc --no-ri
+#   - bundle --version
+>>>>>>> feature/chofer-crud
 
 install: bundle install
 
@@ -16,3 +24,10 @@ script:
 
 rvm:
   - 2.5.3
+
+notifications:
+  email:
+    recipent:
+      - benjamin.pena.olvera@gmail.com
+    on_success: always
+    on_failer: always
